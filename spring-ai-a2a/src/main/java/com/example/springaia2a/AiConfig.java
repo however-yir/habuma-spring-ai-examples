@@ -4,7 +4,7 @@ import io.a2a.server.agentexecution.AgentExecutor;
 import io.a2a.spec.AgentCapabilities;
 import io.a2a.spec.AgentCard;
 import io.a2a.spec.AgentSkill;
-import org.springaicommunity.a2a.server.executor.DefaultA2AChatClientAgentExecutor;
+import org.springaicommunity.a2a.server.executor.DefaultAgentExecutor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -50,8 +50,8 @@ public class AiConfig {
 
   @Bean
   public AgentExecutor agentExecutor(ChatClient chatClient) {
-    return new DefaultA2AChatClientAgentExecutor(chatClient, (chat, ctx) -> {
-      String userMessage = DefaultA2AChatClientAgentExecutor.extractTextFromMessage(ctx.getMessage());
+    return new DefaultAgentExecutor(chatClient, (chat, ctx) -> {
+      String userMessage = DefaultAgentExecutor.extractTextFromMessage(ctx.getMessage());
       return chat.prompt().user(userMessage).call().content();
     });
   }

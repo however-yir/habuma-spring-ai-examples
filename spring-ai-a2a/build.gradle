@@ -28,7 +28,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.ai:spring-ai-starter-model-openai'
 
-    implementation 'org.springaicommunity:spring-ai-a2a-server-autoconfigure:0.1.0'
+    implementation 'org.springaicommunity:spring-ai-a2a-server-autoconfigure:0.2.0'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
