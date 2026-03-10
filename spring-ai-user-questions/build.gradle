@@ -8,6 +8,10 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 description = 'spring-ai-user-questions'
 
+tasks.withType(JavaExec) {
+    jvmArgs '--enable-native-access=ALL-UNNAMED'
+}
+
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(25)
@@ -29,7 +33,7 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 
-    implementation 'org.springaicommunity:spring-ai-agent-utils:0.4.2'
+    implementation 'org.springaicommunity:spring-ai-agent-utils:0.5.0'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
