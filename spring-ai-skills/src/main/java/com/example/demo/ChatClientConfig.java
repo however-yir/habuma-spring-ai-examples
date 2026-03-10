@@ -21,7 +21,7 @@ public class ChatClientConfig {
 			.defaultSystem("IMPORTANT: Always use the available skills to assist the user in their requests. When available follow skills instructions exactly.")
 			.defaultTools(ShellTools.builder().build())
 			.defaultToolCallbacks(SkillsTool.builder().addSkillsResource(skillPath).build())
-			.defaultAdvisors(ToolCallAdvisor.builder().build(), MyLoggingAdvisor.builder().build())
+			.defaultAdvisors(ToolCallAdvisor.builder().build())
 			.build();
 	}
 

@@ -20,17 +20,20 @@ repositories {
 }
 
 ext {
-    set('springAiVersion', "2.0.0-SNAPSHOT")
+    set('springAiVersion', "2.0.0-M2")
 }
 
 dependencies {
 //     implementation 'org.springframework.ai:spring-ai-starter-model-anthropic'
-    implementation 'org.springframework.ai:spring-ai-starter-model-openai-sdk'
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
 //    implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
     // implementation 'org.springframework.ai:spring-ai-starter-model-google-genai'
 
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+    implementation 'org.springframework.boot:spring-boot-starter-restclient'
     implementation 'org.springaicommunity:spring-ai-agent-utils:0.4.1'
+
+    implementation 'org.zalando:logbook-spring-boot-starter:4.0.0-RC.1'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
