@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -euo pipefail
+
 cd ./prompts-and-output-parsers
 ./mvnw -q test
 cd ..
@@ -16,9 +18,6 @@ cd ./spring-ai-kotlin
 cd ..
 cd ./spring-ai-kotlin-rag
 ./mvnw -q test
-cd ..
-cd ./spring-ai-mcp-client
-./gradlew -q test
 cd ..
 cd ./spring-ai-mcp-client
 ./gradlew -q test
