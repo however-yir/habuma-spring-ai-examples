@@ -13,7 +13,7 @@ Before running the application, you'll need to acquire an OpenAI API key. Set
 the API key as an environment variable named `OPENAI_API_KEY`. E.g.,
 
 ```
-$ export OPENAI_API_KEY=sk-1234567890abcdef1234567890abcdef
+$ export OPENAI_API_KEY=REPLACE_ME
 ```
 
 You'll also need a document for it to load. Set the `app.resource` property in
